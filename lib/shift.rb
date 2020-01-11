@@ -21,10 +21,8 @@ class Shift
 
   def create_offset(date)
     date_squared = date.to_i ** 2
-    date_squared[-4..-1]
+    date_squared.to_s[-4..-1].to_i
   end
-
-
 
   # def a_offset(key)
   #

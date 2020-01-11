@@ -33,11 +33,11 @@ class ShiftTest < Minitest::Test
   end
 
 
-  def test_it_can_return_last_4_digits_of_date_squared
+  def test_it_can_create_shift
     skip
-    assert_equal 1, @shift1.a_return(@date1)
-    assert_equal 0, @shift1.b_return(@date1)
-    assert_equal 2, @shift1.c_return(@date1)
-    assert_equal 5, @shift1.d_return(@date1)
+    assert_equal 3, @shift1.a_shift(@date1)
+    assert_equal 27, @shift1.b_shift(@date1)
+    assert_equal 73, @shift1.c_shift(@date1)
+    assert_equal 20, @shift1.d_shift(@date1)
   end
 end
