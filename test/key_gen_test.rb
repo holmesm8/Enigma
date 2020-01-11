@@ -13,7 +13,6 @@ class KeyGenTest < Minitest::Test
 
   def test_it_can_generate_random_5_digit_key
     skip
-    assert_equal "52134", @key1.generate_random_key
+    assert_equal "52134", KeyGen.generate_random_key
   end
-
 end
