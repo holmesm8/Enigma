@@ -3,27 +3,21 @@ require './lib/date_gen'
 
 class Shift
 
-  def self.a_return(key)
-    key[0..1].to_i
+  def self.key_array(key)
+    keys = key.chars.each_cons(2).map {|pair| pair.join}
+    keys.map {|num| num.to_i}
   end
 
-  def self.b_return(key)
-    key[1..2].to_i
-  end
-
-  def self.c_return(key)
-    key[2..3].to_i
-  end
-
-  def self.d_return(key)
-    key[3..4].to_i
-  end
-
-  def self.create_offset(date)
+  def self.offset_array(date)
     date_squared = date.to_i ** 2
-    date_squared.to_s[-4..-1].to_i
+    offset = (date_squared.to_s[-4..-1]).split("")
+    offset.map {|num| num.to_i}
   end
 
-
-
+  def self.shift_array(key, date)
+    keys = key_array(key)
+    offsets = offset_array(date)
+    key_offset = keys.zip(offsets)
+    key_offset.map {|pair| pair.sum}
+  end
 end
