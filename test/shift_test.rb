@@ -13,20 +13,23 @@ class ShiftTest < Minitest::Test
     # @date1 = DateGen.current_date
   end
 
-  def test_it_has_attributes
-    skip
+  # def test_it_has_attributes
+  #   skip
+  # end
+
+  # def test_it_can_return_key_placements
+  #   assert_equal 02, Shift.a_return(@key1)
+  #   assert_equal 27, Shift.b_return(@key1)
+  #   assert_equal 71, Shift.c_return(@key1)
+  #   assert_equal 15, Shift.d_return(@key1)
+  # end
+
+  def test_it_can_return_the_key_in_an_array
+    assert_equal [0, 2, 7, 1, 5], Shift.key_array(@key1)
   end
 
-  def test_it_can_return_key_placements
-    assert_equal 02, Shift.a_return(@key1)
-    assert_equal 27, Shift.b_return(@key1)
-    assert_equal 71, Shift.c_return(@key1)
-    assert_equal 15, Shift.d_return(@key1)
-  end
-
-  def test_it_can_create_offset
-    assert_equal 1025, Shift.create_offset(@date1)
-
+  def test_it_can_create_offset_into_array
+    assert_equal [1, 0, 2, 5], Shift.create_offset_array(@date1)
   end
 
 
