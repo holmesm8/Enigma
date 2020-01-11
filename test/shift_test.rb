@@ -30,6 +30,7 @@ class ShiftTest < Minitest::Test
 
   def test_it_can_create_offset
     assert_equal 1025, @shift1.create_offset(@date1)
+
   end
 
 

@@ -3,6 +3,8 @@ require './lib/date_gen'
 
 class Shift
 
+  @offset = 0
+
   def a_return(key)
     key[0..1].to_i
   end
@@ -21,11 +23,8 @@ class Shift
 
   def create_offset(date)
     date_squared = date.to_i ** 2
-    date_squared.to_s[-4..-1].to_i
+    @offset = date_squared.to_s[-4..-1].to_i
   end
 
-  # def a_offset(key)
-  #
-  # end
 
 end
