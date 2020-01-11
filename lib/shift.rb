@@ -19,5 +19,12 @@ class Shift
     key[3..4].to_i
   end
 
-  
+  def date_squared(date)
+    date.to_i ** 2
+  end
+
+  def a_offset(key)
+
+  end
+
 end
