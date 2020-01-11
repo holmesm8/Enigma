@@ -14,24 +14,10 @@ class Shift
     offset.map {|num| num.to_i}
   end
 
-  def method_name
-
+  def self.shift_array(key, date)
+    keys = key_array(key)
+    offsets = offset_array(date)
+    key_offset = keys.zip(offsets)
+    key_offset.map {|pair| pair.sum}
   end
-
-
-  # def self.a_return(key)
-  #   key[0..1].to_i
-  # end
-  #
-  # def self.b_return(key)
-  #   key[1..2].to_i
-  # end
-  #
-  # def self.c_return(key)
-  #   key[2..3].to_i
-  # end
-  #
-  # def self.d_return(key)
-  #   key[3..4].to_i
-  # end
 end
