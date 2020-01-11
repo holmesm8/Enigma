@@ -19,12 +19,15 @@ class Shift
     key[3..4].to_i
   end
 
-  def date_squared(date)
-    date.to_i ** 2
+  def create_offset(date)
+    date_squared = date.to_i ** 2
+    date_squared[-4..-1]
   end
 
-  def a_offset(key)
 
-  end
+
+  # def a_offset(key)
+  #
+  # end
 
 end

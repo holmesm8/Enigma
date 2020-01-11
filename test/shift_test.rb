@@ -28,12 +28,12 @@ class ShiftTest < Minitest::Test
     assert_equal 15, @shift1.d_return(@key1)
   end
 
-  def test_it_can_square_date
-    assert_equal 1672401025, @shift1.date_squared(@date1)
+  def test_it_can_create_offset
+    assert_equal 1025, @shift1.create_offset(@date1)
   end
 
 
-  def test_it_can_return_offset_values
+  def test_it_can_return_last_4_digits_of_date_squared
     skip
     assert_equal 1, @shift1.a_return(@date1)
     assert_equal 0, @shift1.b_return(@date1)
