@@ -17,27 +17,19 @@ class ShiftTest < Minitest::Test
   #   skip
   # end
 
-  # def test_it_can_return_key_placements
-  #   assert_equal 02, Shift.a_return(@key1)
-  #   assert_equal 27, Shift.b_return(@key1)
-  #   assert_equal 71, Shift.c_return(@key1)
-  #   assert_equal 15, Shift.d_return(@key1)
+  # def test_it_can_separate_key_string_into_pairs
+  #   assert_equal ["02", "27", "71", "15"], Shift.key_pairs(@key1)
   # end
 
-  def test_it_can_return_the_key_in_an_array
-    assert_equal [0, 2, 7, 1, 5], Shift.key_array(@key1)
+  def test_it_can_transform_key_into_array
+    assert_equal [02, 27, 71, 15], Shift.key_array(@key1)
   end
 
-  def test_it_can_create_offset_into_array
-    assert_equal [1, 0, 2, 5], Shift.create_offset_array(@date1)
+  def test_it_can_transform_offset_into_array
+    assert_equal [1, 0, 2, 5], Shift.offset_array(@date1)
   end
 
+  def test_it_can_combine_key_and_offset
 
-  def test_it_can_create_shift
-    skip
-    assert_equal 3, Shift.a_shift(@date1)
-    assert_equal 27, Shift.b_shift(@date1)
-    assert_equal 73, Shift.c_shift(@date1)
-    assert_equal 20, Shift.d_shift(@date1)
   end
 end
