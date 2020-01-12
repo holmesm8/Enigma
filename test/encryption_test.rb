@@ -16,8 +16,6 @@ class EncryptionTest < Minitest::Test
     assert_instance_of Encryption, @encryption
   end
 
-  # def test_it_can_create_shift_hash
-  #   assert_equal ({a: 3, b: 27, c: 73, d: 20}), @encryption.shift_hash(@key1, @date1)
-  # end
+  
 
 end
