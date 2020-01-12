@@ -6,7 +6,6 @@ class Shift
   def self.key_array(key)
     keys = key.chars.each_cons(2).map {|pair| pair.join}
     keys.map {|num| num.to_i}
-    require "pry"; binding.pry
   end
 
   def self.offset_array(date)
