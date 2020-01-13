@@ -25,7 +25,7 @@ class ShiftTest < Minitest::Test
     assert_equal [1, 0, 2, 5], Shift.offset_array(@date1)
   end
 
-  def test_it_can_combine_key_and_offset_for_shift_values
+  def test_it_can_combine_key_and_offset
     assert_equal [3, 27, 73, 20], Shift.shift_array(@key1, @date1)
   end
 end
