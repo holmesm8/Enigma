@@ -9,7 +9,6 @@ class DecryptionTest < Minitest::Test
     @key1 = "02715"
     @date1 = "040895"
     @message1 = "keder ohulw"
-    # @shift1 = Shift.shift_array(@key1, @date1)
   end
 
   def test_it_exists
@@ -21,6 +20,6 @@ class DecryptionTest < Minitest::Test
   end
 
   def test_it_can_change_message_with_shift_hash
-    assert_equal "hello world", @decryption1.shifted_message(@message1, @key1, @date1)
+    assert_equal "hello world", @decryption1.unshift_message(@message1, @key1, @date1)
   end
 end
