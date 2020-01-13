@@ -18,4 +18,11 @@ class Enigma
                 date: date
                 }
   end
+
+  def decrypt(message, key = @keygen, date = @dategen)
+    {decryption: @decryption.unshift_message(message, key, date),
+                key: key,
+                date: date
+                }
+  end
 end
