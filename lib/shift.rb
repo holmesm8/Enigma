@@ -20,12 +20,4 @@ class Shift
     key_offset = keys.zip(offsets)
     key_offset.map {|pair| pair.sum}
   end
-
-  def self.shift_hash(key, date)
-    shift_array = shift_array(key, date)
-    shifter = {a: shift_array[0],
-               b: shift_array[1],
-               c: shift_array[2],
-               d: shift_array[3]}
-  end
 end
