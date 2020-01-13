@@ -1,11 +1,11 @@
-class Encryption
+class Decryption
   attr_reader :alphabet
 
   def initialize
     @alphabet = ("a".."z").to_a << " "
   end
 
-  def self.shifted_message(message, key, date)
+  def shifted_message(message, key, date)
     shifty = Shift.shift_array(key, date)
     message.downcase.chars.map do |character|
       if !@alphabet.include?(character)
@@ -14,7 +14,7 @@ class Encryption
         shifty.rotate!
         " "
       else
-        shifted_letter = @alphabet[(character.ord - 97 + shifty[0]) % 27]
+        shifted_letter = @alphabet[(character.ord - 97 - shifty[0]) % 27]
         shifty.rotate!
         shifted_letter
       end
