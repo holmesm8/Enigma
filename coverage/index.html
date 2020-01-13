@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-12T20:15:45-07:00">2020-01-12T20:15:45-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-12T20:35:28-07:00">2020-01-12T20:35:28-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -61,7 +61,7 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#0d41184b7f32e322bcd25fa20860aa0cf4aa335d" class="src_link" title="lib/encryption.rb">lib/encryption.rb</a></td>
+        <td class="strong"><a href="#eb5bc193c8550301bccfce4749887b2f01f175e5" class="src_link" title="lib/decryption.rb">lib/decryption.rb</a></td>
         <td class="green strong">93.33 %</td>
         <td>23</td>
         <td>15</td>
@@ -155,9 +155,9 @@
 </div>
 
       
-        <div class="source_table" id="0d41184b7f32e322bcd25fa20860aa0cf4aa335d">
+        <div class="source_table" id="eb5bc193c8550301bccfce4749887b2f01f175e5">
   <div class="header">
-    <h3>lib/encryption.rb</h3>
+    <h3>lib/decryption.rb</h3>
     <h4><span class="green">93.33 %</span> covered</h4>
     <div>
       <b>15</b> relevant lines. 
@@ -172,7 +172,7 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class Encryption</code>
+          <code class="ruby">class Decryption</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="2">
@@ -214,7 +214,7 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  def shift_message(message, key, date)</code>
+          <code class="ruby">  def shifted_message(message, key, date)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
@@ -268,7 +268,7 @@
         <li class="covered" data-hits="10" data-linenumber="17">
           <span class="hits">10</span>
           
-          <code class="ruby">        shifted_letter = @alphabet[(character.ord - 97 + shifty[0]) % 27]</code>
+          <code class="ruby">        shifted_letter = @alphabet[(character.ord - 97 - shifty[0]) % 27]</code>
         </li>
       
         <li class="covered" data-hits="10" data-linenumber="18">
