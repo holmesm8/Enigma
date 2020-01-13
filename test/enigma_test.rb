@@ -1,23 +1,22 @@
 require_relative './test_helper'
-require './lib/key'
+require './lib/enigma'
 
 class EnigmaTest < Minitest::Test
 
   def setup
-    @enigma = Enigma.new
+    @enigma1 = Enigma.new
   end
 
   def test_it_exists
-    assert_instance_of Enigma, @enigma
+    assert_instance_of Enigma, @enigma1
   end
 
   def test_it_can_encrypt
-    skip
     expected = {encryption: "keder ohulw",
                 key: "02715",
                 date: "040895"
                 }
-    assert_equal expected, @enigma.encrypt("Hello world", "02715", "040895")
+    assert_equal expected, @enigma1.encrypt("Hello world", "02715", "040895")
   end
 
   def test_it_can_decrypt
@@ -26,6 +25,6 @@ class EnigmaTest < Minitest::Test
                 key: "02715",
                 date: "040895"
                 }
-    assert_equal expected, @enigma.decrypt("keder ohulw", "02715", "040895")
+    assert_equal expected, @enigma1.decrypt("keder ohulw", "02715", "040895")
   end
 end
