@@ -5,7 +5,7 @@ class Decryption
     @alphabet = ("a".."z").to_a << " "
   end
 
-  def shifted_message(message, key, date)
+  def unshift_message(message, key, date)
     shifty = Shift.shift_array(key, date)
     message.downcase.chars.map do |character|
       if !@alphabet.include?(character)

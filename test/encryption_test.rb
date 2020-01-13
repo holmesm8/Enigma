@@ -9,7 +9,6 @@ class EncryptionTest < Minitest::Test
     @key1 = "02715"
     @date1 = "040895"
     @message1 = "hello world"
-    # @shift1 = Shift.shift_array(@key1, @date1)
   end
 
   def test_it_exists
@@ -21,6 +20,6 @@ class EncryptionTest < Minitest::Test
   end
 
   def test_it_can_change_message_with_shift_hash
-    assert_equal "keder ohulw", @encryption1.shifted_message(@message1, @key1, @date1)
+    assert_equal "keder ohulw", @encryption1.shift_message(@message1, @key1, @date1)
   end
 end
