@@ -26,4 +26,10 @@ class EnigmaTest < Minitest::Test
                 }
     assert_equal expected, @enigma1.decrypt("keder ohulw", "02715", "040895")
   end
+
+  # def test_it_can_encrypt_with_todays_date
+  #   encrypted = Enigma.new
+  #   encrypted = enigma.encrypt("hello world", "02715")
+  #   assert_equal "sdf", encrypted
+  # end
 end
