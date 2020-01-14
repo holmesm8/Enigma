@@ -28,7 +28,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_it_can_encrypt_with_key_and_todays_date
-    expected = {encryption: "lib sdmcvpu",
+    expected = {encryption: "pib wdmczpu",
                 key: "02715",
                 date: Date.today.strftime("%m%d%y")
                 }
@@ -40,7 +40,7 @@ class EnigmaTest < Minitest::Test
                 key: "02715",
                 date: Date.today.strftime("%m%d%y")
                 }
-    assert_equal expected, @enigma1.decrypt("lib sdmcvpu", "02715")
+    assert_equal expected, @enigma1.decrypt("pib wdmczpu", "02715")
   end
 
   def test_it_can_encrypt_with_random_key_and_todays_date
