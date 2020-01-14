@@ -22,4 +22,8 @@ class DecryptionTest < Minitest::Test
   def test_it_can_change_message_with_shift_hash
     assert_equal "hello world", @decryption1.unshift_message(@message1, @key1, @date1)
   end
+
+  def test_it_can_return_a_special_character
+    assert_equal "!", @decryption1.unshift_message("!", @key1, @date1)
+  end
 end
