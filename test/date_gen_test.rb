@@ -12,6 +12,7 @@ class DateGenTest < Minitest::Test
   end
 
   def test_it_can_return_todays_date
-    assert_equal "011120", DateGen.current_date
+    DateGen.expects(:current_date).returns("011320")
+    assert_equal "011320", DateGen.current_date
   end
 end

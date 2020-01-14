@@ -10,9 +10,11 @@ class Encryption
     message.downcase.chars.map do |character|
       if !@alphabet.include?(character)
         character
-      elsif character == " "
         shifty.rotate!
-        " "
+      elsif character == " "
+        shifted_space = @alphabet[(123 - 97 + shifty[0]) % 27]
+        shifty.rotate!
+        shifted_space
       else
         shifted_letter = @alphabet[(character.ord - 97 + shifty[0]) % 27]
         shifty.rotate!
