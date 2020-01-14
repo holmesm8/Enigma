@@ -11,6 +11,7 @@ class Encryption
       if !@alphabet.include?(character)
         character
         shifty.rotate!
+        character
       elsif character == " "
         shifted_space = @alphabet[(123 - 97 + shifty[0]) % 27]
         shifty.rotate!

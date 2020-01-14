@@ -22,4 +22,8 @@ class EncryptionTest < Minitest::Test
   def test_it_can_change_message_with_shift_hash
     assert_equal "keder ohulw", @encryption1.shift_message(@message1, @key1, @date1)
   end
+
+  def test_it_can_return_a_special_character
+    assert_equal "!", @encryption1.shift_message("!", @key1, @date1)
+  end
 end
