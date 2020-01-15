@@ -13,7 +13,6 @@ message.close
 
 decryption = enigma.decrypt(incoming_message, ARGV[2], ARGV[3])
 decrypt_message = File.open(ARGV[1], "w")
-require "pry"; binding.pry
 decrypt_message.write(decryption[:decryption])
 decrypt_message.close
 
