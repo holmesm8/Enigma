@@ -14,7 +14,7 @@
 I made a conscious effort to design my Enigma project with the Law of Demeter
 in mind. I wanted very specific functions and methods separated out. I learned quite a bit in our group project and a big takeaway for me was not having methods and classes wrapped up in one cluster. I wanted flexibility,
 adaptability, and a way to perform maintenance in case I needed to refactor
-or a method was not properly due to bad testing.
+or a method was not properly tested for all scenarios.
 
 ### Ruby Conventions and Mechanics - Meets Expectations
 * Code is mostly properly indented, spaced, and lines are not excessively long
