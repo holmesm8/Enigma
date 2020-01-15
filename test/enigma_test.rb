@@ -28,7 +28,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_it_can_encrypt_with_key_and_todays_date
-    expected = {encryption: "pib wdmczpu",
+    expected = {encryption: "jib qdmctpu",
                 key: "02715",
                 date: Date.today.strftime("%m%d%y")
                 }
@@ -40,12 +40,15 @@ class EnigmaTest < Minitest::Test
                 key: "02715",
                 date: Date.today.strftime("%m%d%y")
                 }
-    assert_equal expected, @enigma1.decrypt("pib wdmczpu", "02715")
+    assert_equal expected, @enigma1.decrypt("jib qdmctpu", "02715")
   end
 
   def test_it_can_encrypt_with_random_key_and_todays_date
     assert_equal 11, @enigma1.encrypt("Hello world")[:encryption].length
+    assert_instance_of String, @enigma1.encrypt("Hello world")[:encryption]
     assert_equal 5, @enigma1.encrypt("Hello world")[:key].length
+    assert_instance_of String, @enigma1.encrypt("Hello world")[:key]
     assert_equal 6, @enigma1.encrypt("Hello world")[:date].length
+    assert_instance_of String, @enigma1.encrypt("Hello world")[:date]
   end
 end
